@@ -28,9 +28,37 @@ const students = [{
 
 function evaulateGrade() {
     console.log(students);
-    for(let i = 0; i<= students.length; i++) {
-console.log(students[i].name+":"+students[i].grade)
-    }
+    for (let i = 0; i < students.length; i++) {
+    let letter;
+        switch(students[i].grade) {
+            case 90: {
+                letter = "A"
+                break;
+            }
+            case 80: {
+                letter = "B"
+                break;
+            }
+            case 70: {
+                letter = "C"
+                break;
+            }
+            default: letter = "F"
+        }
+
+    // if (students[i].grade >= 90) {
+    //   letter = "A";
+    // } else if (students[i].grade >= 80) {
+    //   letter = "B";
+    // } else if (students[i].grade >= 70) {
+    //   letter = "C";
+    // } else {
+    //   letter = "F";
+    // }
+
+    console.log(students[i].name + " got a " + letter);
+  }
+
 }
 
 evaulateGrade();
