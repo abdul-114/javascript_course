@@ -28,6 +28,9 @@ const students = [{
 
 function evaulateGrade() {
     console.log(students);
+    for(let i = 0; i<= students.length; i++) {
+console.log(students[i].name+":"+students[i].grade)
+    }
 }
 
 evaulateGrade();
