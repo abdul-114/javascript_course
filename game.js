@@ -37,6 +37,7 @@ function update() {
     player.y = canvas.height - player.height;
     player.velocityY = 0;
   }
+  updateObstacles()
 }
 
 /* ---------- Draw ---------- */
@@ -45,6 +46,7 @@ function draw() {
 
   ctx.fillStyle = "#66aaff";
   ctx.fillRect(player.x, player.y, player.width, player.height);
+  drawObstacles()
 }
 
 
@@ -57,16 +59,11 @@ function loop() {
 
 /* ---------- Controls ---------- */
 window.addEventListener("keydown", (e) => {
-  // if (e.code === "Space") {
-  //   e.preventDefault();
-  //   player.velocityY = FLAP;
-  // }
-  let greeting ="";
-  let time=21;
-// if (time < 20) { //false
-//   greeting = "Good day";
-// } else if (time < 21) { //false
-//   greeting = "Good evening"
-// }
-  greeting = (time < 20) ? "Good day" : "Good evening";
+   if (e.code === "Space") {
+     e.preventDefault();
+     player.velocityY = FLAP;
+   }
+
+
+ 
 });
