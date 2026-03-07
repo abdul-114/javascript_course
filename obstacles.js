@@ -2,7 +2,9 @@
 let obstacles = [];
 let spawnTimer = 0;
 const SPAWN_RATE = 90;
-const SCROLL_SPEED = 4;
+const SCROLL_SPEED = 2;
+
+let score = 0;
 
 /* Create a new obstacle */
 function spawnObstacle() {
@@ -45,4 +47,14 @@ function drawObstacles() {
     const bottomY = o.topHeight + o.gap;
     ctx.fillRect(o.x, bottomY, o.width, canvas.height - bottomY);
   });
+  obstacles.forEach(o => {
+  if (!o.passed && o.x + o.width < player.x) {
+    o.passed = true;
+    score++;
+    scoreElmt.textContent = score;
+  }
+});
+
 }
+
+const scoreElmt = document.getElementById('score');
