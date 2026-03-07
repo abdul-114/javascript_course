@@ -37,7 +37,7 @@ function update() {
     player.y = canvas.height - player.height;
     player.velocityY = 0;
   }
-  updateObstacles()
+  updateObstacles();
 }
 
 /* ---------- Draw ---------- */
@@ -46,7 +46,7 @@ function draw() {
 
   ctx.fillStyle = "#66aaff";
   ctx.fillRect(player.x, player.y, player.width, player.height);
-  drawObstacles()
+  drawObstacles();
 }
 
 
