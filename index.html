@@ -1,19 +1,30 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>Fly Game</title>
   <link rel="stylesheet" href="style.css" />
-  
+
 </head>
+
 <body>
-<h1 id="score"></h1>
-  <!-- Main game canvas -->
-  <canvas id="game" width="800" height="450"></canvas>
+  <div id="game-container">
+    <div id="score-container">
+      <h1 style="color:white">Score:</h1>&emsp;
+      <h1 style="color:white" id="score"></h1>
+      &emsp;&emsp;
+      <h1 style="color:white">Lives:</h1>&emsp;
+      <h1 style="color:white" id="lives"></h1>
+    </div>
+    <!-- Main game canvas -->
+    <canvas id="game" width="800" height="450"></canvas>
+  </div>
+
 
   <!-- Game logic -->
-  <script src="game.js"></script>
   <script src="obstacles.js"></script>
+  <script src="game.js"></script>
 </body>
+
 </html>
->
